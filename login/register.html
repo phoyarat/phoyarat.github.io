@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+    <!-- กล่องสร้างบัญชี -->
+    <div class="login-container">
+    <h2>สร้างบัญชีใหม่</h2>
+    <form action="location.html">
+        <label >ชื่อผู้ใช้:</label>
+        <input type="text" id="username" name="username" >
+        <label >พาสเวิด:</label>
+        <input type="password" id="password" name="password" >
+       <hr>
+        <input type="text" placeholder="ชื่อ">
+        <input type="text" placeholder="นามสกุล">
+        <!-- ที่อยู่ -->
+        <label for="address">ที่อยู่:</label>
+        <!-- rows กว้าง / cols ยาว -->
+        <textarea placeholder="กรอกที่อยู่ของคุณ" rows="4" cols="40"></textarea>
+        <!-- เพศ -->
+           <label>เพศ:</label><br>
+        <input type="radio" name="gender">
+        <label>ชาย</label><br>
+        <input type="radio" name="gender">
+        <label>หญิง</label><br><br>
+        <input type="submit" value="สร้างบัญชี">
+    </form>
+    </div>
+</body>
+</html>
