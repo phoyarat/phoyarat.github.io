@@ -1,0 +1,84 @@
+.banner {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.banner-container {
+  position: relative;
+}
+
+.nev {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.042); /* พื้นหลังโปร่งใส */
+  padding: 10px 20px;
+}
+
+.logo-k {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  z-index: 20;
+  font-size: 32px;
+  font-weight: bold;
+  color: #000;
+  background-color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+.nav-link.text-white:hover {
+  opacity: 0.6; /* ทำให้จางลง */
+}
+/* เอฟเฟกต์ลื่นไหล */
+.nav-link {
+  transition: 0.3s ease;
+}
+
+.name {
+  position: absolute;
+  top: 300px;
+  left: 500px;
+  transform: translate(-50%, -50%);
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #f47019;
+  text-shadow: 2px 2px 4px #000;
+  z-index: 2;
+}
+.detail {
+  position: absolute;
+  top: 390px;
+  left: 500px;
+  transform: translate(-50%, -50%);
+  font-size: 2.1rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 4px #000;
+}
+.btn-port {
+  position: absolute;
+  top: 450px;
+  left: 430px;
+  padding: 12px 24px;
+  background-color: #f47019;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-port:hover {
+  background-color: #ff812b; /* สีสว่างขึ้น */
+  transform: scale(1.05); /* ขยายเล็กน้อย */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
