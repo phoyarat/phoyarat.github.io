@@ -1,0 +1,64 @@
+.timeline-with-icons {
+  border-left: 1px solid hsl(0, 0%, 90%);
+  position: relative;
+  list-style: none;
+}
+
+.timeline-with-icons .timeline-item {
+  position: relative;
+}
+
+.timeline-with-icons .timeline-item:after {
+  position: absolute;
+  display: block;
+  top: 0;
+}
+
+
+.timeline-with-icons .timeline-icon {
+  position: absolute;
+  left: -48px;
+  background-color: #ffe3d1;
+  color: hsl(217, 88.8%, 35.1%);
+  border-radius: 50%;
+  height: 31px;
+  width: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-menu {
+    color: white;
+    text-align: center;
+    padding-top: 1.5rem;
+    border-bottom: 3px solid #f47019; /* เส้นขีดใต้สีส้ม */
+    width: fit-content; /* ความยาวเส้น */
+    margin: auto; /* จัดให้อยู่กึ่งกลาง */
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-item {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation-fill-mode: forwards;
+  animation-duration: 0.6s;
+  animation-name: none;
+  animation-delay: var(--delay, 0s);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-item.show {
+  animation-name: fadeInDown;
+  animation-fill-mode: forwards; /* ต้องมี เพื่อเก็บสถานะสุดท้าย */
+}

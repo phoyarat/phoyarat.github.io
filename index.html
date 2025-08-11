@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <script
@@ -22,16 +23,28 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <!-- banner/css -->
+    <!-- ถ้าเรียกใช้ html ต้องเพิ่มjavaและใส่ id ในบรรทัด div -->
     <link rel="stylesheet" href="/css/banner.css" />
+    <link rel="stylesheet" href="/css/about.css" />
+    <link rel="stylesheet" href="/css/project.css" />
+    <link rel="stylesheet" href="/css/contact.css" />
     <link rel="stylesheet" href="/nev.html" />
+    <link rel="stylesheet" href="/about.html" />
+    <link rel="stylesheet" href="/project.html" />
+    <link rel="stylesheet" href="/contact.html" />
   </head>
+
   <body>
     <div class="banner-container">
+      <div>
       <!-- banner -->
+
       <div id="nev"></div>
       <!-- ตัวหนังสือ -->
       <div class="name"></div>
+
       <script src="/js/banner.js"></script>
+      <!-- เรียกใช้javaเพิ่มหน้า+อื่นๆตกแต่ง -->
 
       <div class="detail">
         สาขาวิชา เทคโนโลยีสารสนเทศ <br />
@@ -43,9 +56,22 @@
         style="background-color: #f47019; color: white"
       >
         PORTFOLIO
-      </button>
+      </button></div>
       <!-- รูปแบนเนอร์ -->
       <img src="/image/banner.png" alt="banner" class="banner" />
+    </div>
+    <!-- about/หน้า2 -->
+    <div id="about-container"></div>
+    <!-- about/หน้า3 -->
+    <div id="project"></div>
+    <!-- contact/หน้า4 -->
+    <div id="contact"></div>
+    <!-- footer -->
+    <a href="#"
+      ><div class="buttonup"><i class="fas fa-arrow-up"></i></div
+    ></a>
+    <div class="footer text-center py-2">
+      Phoyarat © Copyright All Rights Reserved
     </div>
   </body>
 </html>

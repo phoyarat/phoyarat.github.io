@@ -1,3 +1,15 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    font-family: "Prompt", sans-serif;
+    margin: 0;
+    box-sizing: border-box; 
+}
+
+.text-main{
+  color: #f47019;
+}
+
 .banner {
   width: 100%;
   height: auto;
@@ -5,6 +17,7 @@
 }
 .banner-container {
   position: relative;
+  width: 100%;
 }
 
 .nev {
@@ -13,8 +26,10 @@
   right: 0;
   left: 0;
   z-index: 10;
-  background-color: rgba(255, 255, 255, 0.042); /* พื้นหลังโปร่งใส */
+  background-color: rgba(37, 37, 37, 0.359); /* พื้นหลังโปร่งใส */
   padding: 10px 20px;
+  backdrop-filter: blur(10px); /* เบลอพื้นหลัง */
+  -webkit-backdrop-filter: blur(10px); /* สำหรับ Safari */
 }
 
 .logo-k {
@@ -33,11 +48,13 @@
   line-height: 40px;
 }
 .nav-link.text-white:hover {
-  opacity: 0.6; /* ทำให้จางลง */
+  color: #f47019 !important; /* ทำให้จางลง */
+  
 }
 /* เอฟเฟกต์ลื่นไหล */
 .nav-link {
   transition: 0.3s ease;
+  
 }
 
 .name {
@@ -56,7 +73,7 @@
   top: 390px;
   left: 500px;
   transform: translate(-50%, -50%);
-  font-size: 2.1rem;
+  font-size: clamp(1rem, 2.5vw, 2.1rem);
   font-weight: bold;
   color: rgb(255, 255, 255);
   text-shadow: 2px 2px 4px #000;
@@ -81,4 +98,20 @@
   background-color: #ff812b; /* สีสว่างขึ้น */
   transform: scale(1.05); /* ขยายเล็กน้อย */
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.buttonup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 20;
+  font-size: 25px;
+  font-weight: bold;
+  color: #000;
+  background-color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
 }

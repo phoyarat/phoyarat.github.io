@@ -1,0 +1,11 @@
+.btn-gradient {
+  background: linear-gradient(to right, #d95f14, #f9a03f); /* ไล่สีจากซ้ายไปขวา */
+  border: none;
+  color: black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* เงา */
+  transition: all 0.3s ease;
+}
+.btn-gradient:hover {
+  background: linear-gradient(to right, #c24f10, #f7b35a); /* ไล่สีใหม่ตอน hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* เงาเข้มขึ้น */
+}
