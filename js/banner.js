@@ -31,6 +31,7 @@ fetch('/about.html')
   })
   .catch(error => console.error('Error loading about.html:', error));
 
+  // เมื่อใช้ ฟังชั่นนี้กับทุกตัว class="animate-item"  จะทำงานเหมือนกัน หายไปและเข้ามาเมื่อเลื่อนสกอเม้า
 function startObserver(container = document) {
   const items = container.querySelectorAll(".animate-item");
 
@@ -66,7 +67,7 @@ fetch('/project.html')
   })
   .catch(error => console.error('Error loading project.html:', error));
 
-
+  
 
   //   contact
 fetch('/contact.html')
@@ -76,3 +77,20 @@ fetch('/contact.html')
     startObserver();  // เรียกฟังก์ชันสังเกต animate-item หลังโหลดเสร็จ
   })
   .catch(error => console.error('Error loading project.html:', error));
+
+
+// ไฟเม้า
+    document.addEventListener('mousemove', e => {
+    const light = document.createElement('div');
+    light.classList.add('mouse-light');
+    light.style.left = e.clientX + 'px';
+    light.style.top = e.clientY + 'px';
+    document.body.appendChild(light);
+
+    setTimeout(() => {
+      light.remove();
+    }, 500); // ให้ไฟหายหลัง 0.5 วิ
+  });
+
+
+  

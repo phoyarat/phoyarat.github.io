@@ -1,11 +1,125 @@
-.btn-gradient {
-  background: linear-gradient(to right, #d95f14, #f9a03f); /* ไล่สีจากซ้ายไปขวา */
+/* container พื้นหลังดำ */
+div[style*="background-color: #000000"] {
+  background-color: #1a1a1a; /* สีดำอมเทาเข้ม ให้ดูนุ่มตา */
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f0f0f0;
+}
+
+/* หัวข้อ */
+.title-menu {
+  font-weight: 700;
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+  color: #f9a03f;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+  margin-bottom: 3rem;
+}
+
+/* การ์ด */
+.card {
+  background-color: #222020; /* สีเข้มอมเทา */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
   border: none;
-  color: black;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* เงา */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #eee;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(249, 160, 63, 0.7);
+}
+
+/* รูปภาพในการ์ด */
+.card-img-top {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* ชื่อโปรเจกต์ */
+.card-title {
+  color: #f9a03f;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Badge */
+.badge.bg-secondary {
+  background-color: #444141;
+  color: #f9a03f;
+  font-weight: 600;
+  margin: 0 4px 6px 0;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  transition: background-color 0.3s ease;
+}
+
+.badge.bg-secondary:hover {
+  background-color: #d95f14;
+  color: #fff;
+  cursor: default;
+}
+
+/* ปุ่มไล่สีทอง-ส้ม หรูหรา */
+.btn-gradient {
+  background: linear-gradient(to right, #d95f14, #f9a03f);
+  border: none;
+  color: #222;
+  font-weight: 700;
+  padding: 0.6rem 2.8rem;
+  border-radius: 40px;
+  box-shadow: 0 6px 14px rgba(217, 95, 20, 0.6);
   transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
 }
+
 .btn-gradient:hover {
-  background: linear-gradient(to right, #c24f10, #f7b35a); /* ไล่สีใหม่ตอน hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* เงาเข้มขึ้น */
+  background: linear-gradient(to right, #f9a03f, #d95f14);
+  color: #222;
+  box-shadow: 0 10px 28px rgba(249, 160, 63, 0.9);
+  transform: translateY(-2px);
+  text-decoration: none;
 }
+
+/* Text center ปรับสี */
+.text-center {
+  color: #eee;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .card-img-top {
+    max-height: 140px;
+  }
+  .card-title {
+    font-size: 1.4rem;
+  }
+  .btn-gradient {
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+  }
+}
+
+/* ไฟเม้า */
+ .mouse-light {
+    position: fixed;
+    pointer-events: none;
+    width: 6px;
+    height: 20px;
+    background: radial-gradient(circle, #c77e0af4, transparent);
+    border-radius: 3px;
+    mix-blend-mode: screen;
+    opacity: 0.8;
+    transform-origin: top center;
+    animation: fadeMove 0.5s forwards;
+  }
+   @keyframes fadeMove {
+    to {
+      opacity: 0;
+      transform: translateY(20px) scaleY(0.2);
+    }
+  }
